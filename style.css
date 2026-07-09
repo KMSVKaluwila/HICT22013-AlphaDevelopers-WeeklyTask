@@ -279,11 +279,7 @@ section > p {
 }
 
    
- =======================================================================
-   SECTION 05: CONTACT FORM & FOOTER (Assign to: Team Member 5)
-   Responsibilities: Contact form container, label alignment, input fields,
-   form submission button, footer, and mobile media queries.
-   ======================================================================= */
+ /*section 5*/
 #contact {
     display: flex;
     flex-direction: column;
