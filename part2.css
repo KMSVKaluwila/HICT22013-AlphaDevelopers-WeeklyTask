@@ -1,0 +1,78 @@
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 7rem 0 6rem 0;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--color-text-main) 40%, var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+}
+
+#hero figure {
+    width: 100%;
+    max-width: 850px;
+    margin-bottom: 2.5rem;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+#hero img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px -12px rgba(79, 70, 229, 0.15);
+}
+
+#hero figcaption {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Native Buttons & Button Hover States */
+button {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border-radius: var(--border-radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+#hero button {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    box-shadow: 0 8px 20px -6px rgba(79, 70, 229, 0.4);
+}
+
+#hero button:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -6px rgba(79, 70, 229, 0.6);
+}
+
+#hero button:active {
+    transform: translateY(0);
+}
