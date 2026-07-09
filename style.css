@@ -185,54 +185,60 @@ section > p {
    Responsibilities: Responsive features grid layout, value articles,
    and visual accent icons/points.
    ======================================================================= */
+#team ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
 
+#team li {
+    display: flex;
+}
 
-   <section id="team">
-            <h2>Meet Our Development Team</h2>
-            <p>A group of five passionate developers committed to excellence.</p>
-            <ul>
-                <li>
-                    <article>
-                        <h3>Team Member 1</h3>
-                        <p>Role: Product Owner & Navigation Specialist</p>
-                        <p>Responsible for: Wireframing the header structure, site navigation flow, and validating
-                            accessibility of links.</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Team Member 2</h3>
-                        <p>Role: Hero Section Developer</p>
-                        <p>Responsible for: Designing the visual hero layouts, crafting the main product messaging, and
-                            optimizing the call-to-action button.</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Team Member 3</h3>
-                        <p>Role: Features & Content Architect</p>
-                        <p>Responsible for: Detailing the product features, organizing technical articles, and
-                            structuring semantic body contents.</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Team Member 4</h3>
-                        <p>Role: Team Page Developer</p>
-                        <p>Responsible for: Showcasing roles, responsibilities, and contributions of each team member.
-                        </p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Team Member 5</h3>
-                        <p>Role: Form & Footer Specialist</p>
-                        <p>Responsible for: Creating interactive contact forms, validating user inputs, and implementing
-                            footer links and address metadata.</p>
-                    </article>
-                </li>
-            </ul>
-        </section>
+#team article {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 2rem;
+    width: 100%;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+#team article:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+    transform: scale(1.02);
+}
+
+#team article h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-main);
+}
+
+/* Role Label Styles */
+#team article p:nth-of-type(1) {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Bio Text */
+#team article p:nth-of-type(2) {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    flex-grow: 1;
+}
+
+   
  =======================================================================
    SECTION 05: CONTACT FORM & FOOTER (Assign to: Team Member 5)
    Responsibilities: Contact form container, label alignment, input fields,
