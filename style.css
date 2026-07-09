@@ -284,5 +284,134 @@ section > p {
    Responsibilities: Contact form container, label alignment, input fields,
    form submission button, footer, and mobile media queries.
    ======================================================================= */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+#contact form {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: 3rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#contact label {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: -0.75rem;
+    color: var(--color-text-main);
+}
+
+#contact input, #contact textarea {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    outline: none;
+    transition: var(--transition-smooth);
+    background-color: var(--color-bg-body);
+}
+
+#contact input::placeholder, #contact textarea::placeholder {
+    color: #94a3b8;
+}
+
+#contact input:hover, #contact textarea:hover {
+    border-color: var(--color-border-hover);
+}
+
+#contact input:focus, #contact textarea:focus {
+    border-color: var(--color-accent);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px var(--color-accent-glow);
+}
+
+#contact textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact button {
+    background-color: var(--color-text-main);
+    color: #ffffff;
+    margin-top: 1rem;
+}
+
+#contact button:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -6px rgba(79, 70, 229, 0.4);
+}
+
+/* --- Footer & Contact Details --- */
+footer {
+    background-color: var(--color-bg-footer);
+    border-top: 1px solid var(--color-border);
+    padding: 4rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+address {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
+
+address a {
+    font-weight: 500;
+}
+
+/* --- Responsive Adjustments (Mobile Queries) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 1.25rem;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    #hero {
+        padding: 4rem 0;
+    }
+
+    #hero h2 {
+        font-size: 2.25rem;
+    }
+
+    #hero p {
+        font-size: 1.05rem;
+    }
+
+    #contact form {
+        padding: 2rem 1.5rem;
+    }
+}
 
