@@ -1,0 +1,206 @@
+/* =======================================================================
+   ALPHADEVELOPERS - MODERN LIGHT-THEME STYLESHEET
+   Uses CSS Custom Properties, Google Fonts, CSS Grid, and Flexbox.
+   Designed entirely on semantic elements to avoid "div soup".
+   ======================================================================= */
+
+/* =======================================================================
+   SECTION 01: GLOBAL STYLES, VARIABLES & HEADER (Assign to: Team Member 1)
+   Responsibilities: Global variables, resets, main container, header,
+   and site-wide navigation design.
+   ======================================================================= */
+
+/* --- CSS Variables & Design Tokens --- */
+:root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Color Palette */
+    --color-bg-body: #f8fafc;        /* Soft slate off-white */
+    --color-bg-card: #ffffff;        /* Pure white for cards & navbar */
+    --color-bg-footer: #f1f5f9;      /* Light gray footer background */
+    --color-text-main: #0f172a;      /* Deep slate for readability */
+    --color-text-muted: #475569;     /* Soft slate for descriptions */
+    --color-accent: #4f46e5;         /* Vibrant Tech Indigo */
+    --color-accent-hover: #4338ca;   /* Darker Indigo for hover states */
+    --color-accent-glow: rgba(79, 70, 229, 0.15);
+    --color-border: #e2e8f0;         /* Slate border line */
+    --color-border-hover: #cbd5e1;   
+    
+    /* Layout & Styling Tokens */
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 24px;
+    
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 40px -15px rgba(79, 70, 229, 0.08), 0 10px 20px -10px rgba(0, 0, 0, 0.04);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Global Resets & Defaults --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg-body);
+    color: var(--color-text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+p {
+    color: var(--color-text-muted);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+}
+
+/* --- Main Layout Container --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Header & Navigation Styles --- */
+header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    max-width: 100%;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--color-accent), #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--color-text-muted);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.25rem 0;
+}
+
+nav a:hover, nav a:focus {
+    color: var(--color-accent);
+}
+
+/* Animated Underline */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: var(--transition-smooth);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* --- Page Sections (Common Styles) --- */
+section {
+    padding: 6rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+section h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--color-text-main);
+}
+
+section > p {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+}
+
+
+/* =======================================================================
+   SECTION 02: HERO SECTION (Assign to: Team Member 2)
+   Responsibilities: Hero block layout, image showcase, captions,
+   and primary Call-to-Action (CTA) button styling.
+   ======================================================================= */
+
+
+
+
+/* =======================================================================
+   SECTION 03: FEATURES SECTION (Assign to: Team Member 3)
+   Responsibilities: Responsive features grid layout, value articles,
+   and visual accent icons/points.
+   ======================================================================= */
+
+
+
+
+/* =======================================================================
+   SECTION 04: TEAM SHOWCASE (Assign to: Team Member 4)
+   Responsibilities: Team grid/list structure, card styling, and role/bio
+   typography hierarchy.
+   ======================================================================= */
+
+
+
+
+/* =======================================================================
+   SECTION 05: CONTACT FORM & FOOTER (Assign to: Team Member 5)
+   Responsibilities: Contact form container, label alignment, input fields,
+   form submission button, footer, and mobile media queries.
+   ======================================================================= */
+
